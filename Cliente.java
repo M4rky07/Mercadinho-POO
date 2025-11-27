@@ -1,4 +1,4 @@
-public class Cliente {
+public abstract class Cliente {
     private String nome;
     private  double valorCompra;
 
@@ -7,9 +7,7 @@ public class Cliente {
         this.valorCompra = valorCompra;
     }
 
-    public double calcularPagamento(){
-        return valorCompra;
-    }
+    public abstract double calcularPagamento();
 
     public double getValorDaCompra(){
         return valorCompra;

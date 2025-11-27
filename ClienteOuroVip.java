@@ -1,11 +1,9 @@
-public class ClienteOuroVip extends Cliente {
+public class ClienteOuroVip extends ClienteVip {
 
-    private String numeroCartao;
     private String endereco;
 
-    public ClienteOuroVip(String nome, double valorDaCompra, String numeroCartao, String endereco) {
-        super(nome, valorDaCompra);
-        this.numeroCartao = numeroCartao;
+    public ClienteOuroVip(String nome, double valorDaCompra, String endereco) {
+        super(nome, valorDaCompra, endereco);
         this.endereco = endereco;
     }
 
@@ -13,18 +11,14 @@ public class ClienteOuroVip extends Cliente {
         return getValorDaCompra() * 0.15;
     }
 
-    public String getNumeroCartao() {
-        return numeroCartao;
-    }
-
     public String getEndereco() {
         return endereco;
     }
 
      public String toString(){
-            return "Cliente Vip: " + super.toString() + "\n O numero do cartão: "
-             + numeroCartao +
-             "\n Seu endereço: " + endereco ; 
+            return "Cliente  Ouro Vip: " + " Nome: " + getNome() + 
+            "\n Valor da compra:" + getValorDaCompra() +
+            "\n Seu endereço: " + endereco ; 
         }
 
 
